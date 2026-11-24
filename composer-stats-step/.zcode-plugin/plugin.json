@@ -1,0 +1,47 @@
+{
+  "name": "composer-stats-step",
+  "version": "0.6.5",
+  "description": "Model step counter chip (steps within the current turn) in the composer status area",
+  "extension": {
+    "engines": {
+      "zcode": "^1.4.0"
+    },
+    "main": "dist/main.mjs",
+    "activationEvents": [
+      "onAvailable"
+    ],
+    "grants": [
+      "sessions.read"
+    ],
+    "protocols": {
+      "rows": 4
+    },
+    "contributes": {
+      "commands": [
+        {
+          "id": "show",
+          "title": {
+            "en-US": "Model steps",
+            "zh-CN": "轮内步数"
+          }
+        }
+      ]
+    }
+  },
+  "slots": {
+    "composer.status": [
+      {
+        "id": "step",
+        "target": {
+          "command": "show"
+        },
+        "title": {
+          "en-US": "Model steps",
+          "zh-CN": "轮内步数"
+        },
+        "icon": "layers",
+        "order": 11
+      }
+    ]
+  }
+}

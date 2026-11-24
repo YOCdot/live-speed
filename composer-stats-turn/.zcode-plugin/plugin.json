@@ -1,0 +1,47 @@
+{
+  "name": "composer-stats-turn",
+  "version": "0.6.5",
+  "description": "Conversation turn counter chip in the composer status area",
+  "extension": {
+    "engines": {
+      "zcode": "^1.4.0"
+    },
+    "main": "dist/main.mjs",
+    "activationEvents": [
+      "onAvailable"
+    ],
+    "grants": [
+      "sessions.read"
+    ],
+    "protocols": {
+      "rows": 4
+    },
+    "contributes": {
+      "commands": [
+        {
+          "id": "show",
+          "title": {
+            "en-US": "Conversation turns",
+            "zh-CN": "对话轮次"
+          }
+        }
+      ]
+    }
+  },
+  "slots": {
+    "composer.status": [
+      {
+        "id": "turn",
+        "target": {
+          "command": "show"
+        },
+        "title": {
+          "en-US": "Conversation turns",
+          "zh-CN": "对话轮次"
+        },
+        "icon": "message-square",
+        "order": 10
+      }
+    ]
+  }
+}

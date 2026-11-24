@@ -1,0 +1,47 @@
+{
+  "name": "composer-stats-speed",
+  "version": "0.9.8",
+  "description": "Generation speed chip (output tokens per second) in the composer status area",
+  "extension": {
+    "engines": {
+      "zcode": "^1.4.0"
+    },
+    "main": "dist/main.mjs",
+    "activationEvents": [
+      "onAvailable"
+    ],
+    "grants": [
+      "sessions.read"
+    ],
+    "protocols": {
+      "rows": 4
+    },
+    "contributes": {
+      "commands": [
+        {
+          "id": "show",
+          "title": {
+            "en-US": "Generation speed",
+            "zh-CN": "生成速度"
+          }
+        }
+      ]
+    }
+  },
+  "slots": {
+    "composer.status": [
+      {
+        "id": "speed",
+        "target": {
+          "command": "show"
+        },
+        "title": {
+          "en-US": "Generation speed",
+          "zh-CN": "生成速度"
+        },
+        "icon": "gauge",
+        "order": 12
+      }
+    ]
+  }
+}

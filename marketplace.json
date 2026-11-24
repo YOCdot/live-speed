@@ -1,0 +1,53 @@
+{
+  "name": "live-speed",
+  "plugins": [
+    {
+      "name": "composer-stats-turn",
+      "source": "./composer-stats-turn",
+      "version": "0.6.5",
+      "icon": "https://api.iconify.design/lucide/message-square.svg?color=%2394a3b8",
+      "description": "Conversation turn counter chip in the composer status area",
+      "displayName": "Composer Stats · Turn",
+      "displayName_i18n": {
+        "en-US": "Composer Stats · Turn",
+        "zh-CN": "对话轮次"
+      },
+      "description_i18n": {
+        "en-US": "Conversation turn counter chip in the composer status area",
+        "zh-CN": "输入框状态区显示当前会话第几轮，悬停查看用时与 Token 用量"
+      }
+    },
+    {
+      "name": "composer-stats-step",
+      "source": "./composer-stats-step",
+      "version": "0.6.5",
+      "icon": "https://api.iconify.design/lucide/layers.svg?color=%2394a3b8",
+      "description": "Model step counter chip (steps within the current turn) in the composer status area",
+      "displayName": "Composer Stats · Step",
+      "displayName_i18n": {
+        "en-US": "Composer Stats · Step",
+        "zh-CN": "轮内步数"
+      },
+      "description_i18n": {
+        "en-US": "Model step counter chip (steps within the current turn) in the composer status area",
+        "zh-CN": "输入框状态区显示当前轮第几步，悬停查看工具调用次数"
+      }
+    },
+    {
+      "name": "composer-stats-speed",
+      "source": "./composer-stats-speed",
+      "version": "0.9.8",
+      "icon": "https://api.iconify.design/lucide/gauge.svg?color=%2394a3b8",
+      "description": "Generation speed chip (output tokens per second) in the composer status area",
+      "displayName": "Composer Stats · Speed",
+      "displayName_i18n": {
+        "en-US": "Composer Stats · Speed",
+        "zh-CN": "生成速度"
+      },
+      "description_i18n": {
+        "en-US": "Generation speed chip (output tokens per second) in the composer status area",
+        "zh-CN": "输入框状态区显示当前输出速度 Tokens/秒"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "live-speed",
+  "version": "1.0.0",
+  "description": "Composer status chips for ZCode: conversation turns, model steps, and generation speed",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/test.mjs && node tests/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
